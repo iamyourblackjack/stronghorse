@@ -1,0 +1,7 @@
+[project]
+name = "stronghorse"
+version = "0.1.0"
+description = "LeetCode practice repository"
+requires-python = ">=3.11"
+dependencies = []
+

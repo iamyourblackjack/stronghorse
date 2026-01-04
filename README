@@ -1,0 +1,49 @@
+# 🐴 Stronghorse
+
+A personal repository for practicing coding problems from LeetCode, HackerRank, and other competitive programming platforms.
+
+## About
+
+This repo serves as my training ground for:
+
+- **LeetCode** problems (Easy → Hard)
+- **Data Structures** implementations
+- **Algorithm** practice and optimization
+- **Interview prep** exercises
+
+## Setup
+
+```bash
+# Install uv (if not already installed)
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Make scripts executable
+chmod +x p*.py
+
+# Run a solution (tests included)
+./p1_two_sum.py
+```
+
+## Structure
+
+```text
+p{number}_{name}.py  # Solution with tests baked in
+```
+
+## Progress
+
+| Category | Solved |
+|----------|--------|
+| Easy     | 0      |
+| Medium   | 0      |
+| Hard     | 0      |
+
+## Goals
+
+- [ ] Solve 100 problems
+- [ ] Master common patterns
+- [ ] Improve time/space complexity intuition
+
+---
+
+> "The horse that runs the fastest is the one that trains the hardest."
