@@ -5,3 +5,15 @@ description = "LeetCode practice repository"
 requires-python = ">=3.11"
 dependencies = []
 
+[tool.ruff]
+line-length = 120
+
+[tool.black]
+line-length = 120
+
+[tool.flake8]
+max-line-length = 120
+
+[tool.pycodestyle]
+max-line-length = 120
+
