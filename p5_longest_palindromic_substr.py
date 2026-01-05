@@ -15,18 +15,18 @@ class Solution:
         if not s:
             return ""
 
-        def expand(l: int, r: int) -> tuple[int, int]:
-            while l >= 0 and r < len(s) and s[l] == s[r]:
-                l -= 1
-                r += 1
-            return l + 1, r  # [l+1, r)
+        def expand(left: int, right: int) -> tuple[int, int]:
+            while left >= 0 and right < len(s) and s[left] == s[right]:
+                left -= 1
+                right += 1
+            return left + 1, right  # [left+1, right)
 
         start = end = 0
 
         for i in range(len(s)):
-            for l, r in (expand(i, i), expand(i, i + 1)):
-                if r - l > end - start:
-                    start, end = l, r
+            for left, right in (expand(i, i), expand(i, i + 1)):
+                if right - left > end - start:
+                    start, end = left, right
 
         return s[start:end]
 
