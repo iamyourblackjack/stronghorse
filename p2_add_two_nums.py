@@ -5,7 +5,7 @@ https://leetcode.com/problems/add-two-numbers/
 
 Difficulty: Medium
 
-You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse 
+You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse
 order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
 """
 
@@ -28,7 +28,7 @@ class Solution:
             current = current.next
             l1 = l1.next if l1 else None
             l2 = l2.next if l2 else None
-        
+
         return dummy.next
 
 

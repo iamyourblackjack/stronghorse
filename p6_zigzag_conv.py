@@ -7,6 +7,7 @@ Difficulty: Medium
 
 The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
 """
+
 from test_lib import run_tests
 
 
@@ -15,9 +16,9 @@ class Solution:
         if numRows == 1 or len(s) <= numRows:
             return s
 
-        strList: list[str] = [''] * numRows
+        strList: list[str] = [""] * numRows
         cur = 0
-        step = 1 # 1 means moving down, -1 means move up
+        step = 1  # 1 means moving down, -1 means move up
 
         for i in range(len(s)):
             strList[cur] += s[i]
@@ -25,15 +26,17 @@ class Solution:
                 step = -1
             elif cur == 0 and step != 1:
                 step = 1
-            
+
             cur += step
 
         return "".join(strList)
 
 
 if __name__ == "__main__":
-    run_tests([
-        (Solution().convert, ("PAYPALISHIRING", 3), "PAHNAPLSIIGYIR", "basic case"),
-        (Solution().convert, ("PAYPALISHIRING", 4), "PINALSIGYAHRPI", "zigzag pattern"),
-        (Solution().convert, ("A", 1), "A", "single row"),
-    ])
+    run_tests(
+        [
+            (Solution().convert, ("PAYPALISHIRING", 3), "PAHNAPLSIIGYIR", "basic case"),
+            (Solution().convert, ("PAYPALISHIRING", 4), "PINALSIGYAHRPI", "zigzag pattern"),
+            (Solution().convert, ("A", 1), "A", "single row"),
+        ]
+    )

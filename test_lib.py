@@ -19,4 +19,3 @@ def run_tests(tests):
     for t in tests:
         test(*t)
     print("All tests passed!")
-

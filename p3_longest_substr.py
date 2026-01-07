@@ -7,6 +7,7 @@ Difficulty: Medium
 
 Given a string s, find the length of the longest substring without repeating characters.
 """
+
 from test_lib import run_tests
 
 
@@ -28,8 +29,10 @@ class Solution:
 
 
 if __name__ == "__main__":
-    run_tests([
-        (Solution().lengthOfLongestSubstring, ("abcabcbb",), 3, "basic case"),
-        (Solution().lengthOfLongestSubstring, ("bbbbb",), 1, "all same characters"),
-        (Solution().lengthOfLongestSubstring, ("pwwkew",), 3, "contains repeating characters"),
-    ])
+    run_tests(
+        [
+            (Solution().lengthOfLongestSubstring, ("abcabcbb",), 3, "basic case"),
+            (Solution().lengthOfLongestSubstring, ("bbbbb",), 1, "all same characters"),
+            (Solution().lengthOfLongestSubstring, ("pwwkew",), 3, "contains repeating characters"),
+        ]
+    )

@@ -8,6 +8,7 @@ Difficulty: Medium
 Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer (similar to C/C++'s atoi
 function).
 """
+
 from test_lib import run_tests
 
 INT_MIN, INT_MAX = -(2**31), 2**31 - 1
@@ -35,10 +36,12 @@ class Solution:
 
 
 if __name__ == "__main__":
-    run_tests([
-        (Solution().myAtoi, ("42",), 42, "basic case"),
-        (Solution().myAtoi, ("   -42",), -42, "negative case"),
-        (Solution().myAtoi, ("4193 with words",), 4193, "words after number"),
-        (Solution().myAtoi, ("-91283472332",), INT_MIN, "overflow negative"),
-        (Solution().myAtoi, ("91283472332",), INT_MAX, "overflow positive"),
-    ])
+    run_tests(
+        [
+            (Solution().myAtoi, ("42",), 42, "basic case"),
+            (Solution().myAtoi, ("   -42",), -42, "negative case"),
+            (Solution().myAtoi, ("4193 with words",), 4193, "words after number"),
+            (Solution().myAtoi, ("-91283472332",), INT_MIN, "overflow negative"),
+            (Solution().myAtoi, ("91283472332",), INT_MAX, "overflow positive"),
+        ]
+    )

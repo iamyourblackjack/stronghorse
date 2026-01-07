@@ -17,11 +17,32 @@ This repo serves as my training ground for:
 # Install uv (if not already installed)
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
+# Install dev dependencies (including ruff)
+uv sync --extra dev
+
 # Make scripts executable
 chmod +x p*.py
 
 # Run a solution (tests included)
 ./p1_two_sum.py
+```
+
+## Linting and Formatting
+
+This project uses [ruff](https://docs.astral.sh/ruff/) for linting and formatting with a line length of 120 characters.
+
+```bash
+# Check for linting issues
+uv run ruff check .
+
+# Auto-fix linting issues
+uv run ruff check --fix .
+
+# Format code
+uv run ruff format .
+
+# Check formatting without modifying files
+uv run ruff format --check .
 ```
 
 ## Structure

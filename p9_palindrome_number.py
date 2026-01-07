@@ -7,6 +7,7 @@ Difficulty: Easy
 
 Given an integer x, return true if x is a palindrome, and false otherwise.
 """
+
 from test_lib import run_tests
 
 
@@ -17,8 +18,10 @@ class Solution:
 
 
 if __name__ == "__main__":
-    run_tests([
-        (Solution().isPalindrome, (121,), True, "basic case"),
-        (Solution().isPalindrome, (-121,), False, "negative case"),
-        (Solution().isPalindrome, (10,), False, "not a palindrome"),
-    ])
+    run_tests(
+        [
+            (Solution().isPalindrome, (121,), True, "basic case"),
+            (Solution().isPalindrome, (-121,), False, "negative case"),
+            (Solution().isPalindrome, (10,), False, "not a palindrome"),
+        ]
+    )

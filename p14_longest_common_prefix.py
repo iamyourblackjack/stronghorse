@@ -7,6 +7,7 @@ Difficulty: Easy
 
 Given an array of strings strs, return the longest common prefix, which is the longest string that is the prefix of all the strings in the array.
 """
+
 from test_lib import run_tests
 
 
@@ -25,7 +26,9 @@ class Solution:
 
 
 if __name__ == "__main__":
-    run_tests([
-        (Solution().longestCommonPrefix, (["flower", "flow", "flight"],), "fl", "basic case"),
-        (Solution().longestCommonPrefix, (["dog", "racecar", "car"],), "", "no common prefix"),
-    ])
+    run_tests(
+        [
+            (Solution().longestCommonPrefix, (["flower", "flow", "flight"],), "fl", "basic case"),
+            (Solution().longestCommonPrefix, (["dog", "racecar", "car"],), "", "no common prefix"),
+        ]
+    )
